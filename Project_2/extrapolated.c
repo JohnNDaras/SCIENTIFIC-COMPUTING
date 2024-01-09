@@ -22,10 +22,6 @@ double ** Insert_rand_A(int*);
 
 struct timeval t1, t2, t3, t4;
 
-
-
-
-
 int main(int argc, char* argv[]) {
 	int back2menu, n,Selection;
 	double **A, *X;
@@ -117,26 +113,26 @@ void ESOR_iterativeMethod (double **A, double **x1, int n, double t, double w, i
 
 
 	while((*itcount) < itmax) {
-	approximation = 0.0;
-	//1 - compute values of x1
-	for(i=0; i<n; i++)
-	(*x1)[i] = (1.0-t)*x0[i] - w* ((k[i]/d[i])*(*x1)[i-2]+(l[i]/d[i])*(*x1)[i-1]) -
-					(t-w)*((k[i]/d[i])*x0[i-2]+(l[i]/d[i])*x0[i-1]) -
-					t*((r[i]/d[i]) *x0[i+1]+(s[i]/d[i])*x0[i+2]-(A[i][n]/d[i]));
-
-	//2 increment of iterations' count
-	(*itcount)++;
-
-	for(i=0; i<n; i++)
-	if(fabs((*x1)[i]-x0[i])>approximation)
-			approximation=fabs((*x1)[i]-x0[i]);
-	if(approximation <e)
-			//3 - check if approximation is less than desired accuracy and if yes stop method
-			break;
-	else
-	//4 - assign x1 to xo to aprroximate better in next iteration
-	for(i=0; i<n; i++)
-	x0[i] = (*x1)[i];
+		approximation = 0.0;
+		//1 - compute values of x1
+		for(i=0; i<n; i++)
+		(*x1)[i] = (1.0-t)*x0[i] - w* ((k[i]/d[i])*(*x1)[i-2]+(l[i]/d[i])*(*x1)[i-1]) -
+						(t-w)*((k[i]/d[i])*x0[i-2]+(l[i]/d[i])*x0[i-1]) -
+						t*((r[i]/d[i]) *x0[i+1]+(s[i]/d[i])*x0[i+2]-(A[i][n]/d[i]));
+	
+		//2 increment of iterations' count
+		(*itcount)++;
+	
+		for(i=0; i<n; i++)
+		if(fabs((*x1)[i]-x0[i])>approximation)
+				approximation=fabs((*x1)[i]-x0[i]);
+		if(approximation <e)
+				//3 - check if approximation is less than desired accuracy and if yes stop method
+				break;
+		else
+		//4 - assign x1 to xo to aprroximate better in next iteration
+		for(i=0; i<n; i++)
+		x0[i] = (*x1)[i];
 	}
 	free (x0);
 	free(k);
@@ -205,15 +201,15 @@ void ESOR_mainmethod (double **A, double *x, int n) {
 					itcpuduration = (t2. tv_sec - t1.tv_sec) * 1000.0;
 					itcpuduration += (t2.tv_usec - t1.tv_usec) / 1000.0;
 					cpuduration += itcpuduration;
-			//printing each time only when a better solution is found
-			if((itcount < min_itcount) || (t==0.1 && w==0.1)) {
-			min_itcount = itcount;
-			t_opt = t;
-			w_opt = w;
-			printf("//   The best parameters up to these iterations are t_optimal = %2.1lf and w_optimal = %2.1lf  //\n", t_opt, w_opt);
-			}
-			itcount = 0;
-			}
+					//printing each time only when a better solution is found
+					if((itcount < min_itcount) || (t==0.1 && w==0.1)) {
+					min_itcount = itcount;
+					t_opt = t;
+					w_opt = w;
+					printf("//   The best parameters up to these iterations are t_optimal = %2.1lf and w_optimal = %2.1lf  //\n", t_opt, w_opt);
+					}
+					itcount = 0;
+				}
 			printf("////////////////////////////////////////////////////////////////////////////////////////////////////////\n");
 
 			if (min_itcount < itmax) 
@@ -250,11 +246,6 @@ void ESOR_mainmethod (double **A, double *x, int n) {
 	free(A);
 	free(x);
 }
-
-
-
-
-
 
 
 
