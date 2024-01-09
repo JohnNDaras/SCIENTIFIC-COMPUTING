@@ -197,13 +197,10 @@ void choldc1(int n, MAT a, VEC p) {
             sum -= a[i][k] * a[j][k];
       }
           if (i == j) {
-            if (sum <= 0) {
+            if (sum <= 0) 
               printf(" a is not positive definite!\n");
-			}	
-			// if(sum<0)
-                // p[i] = sqrt(-sum);
-			else 
-				p[i] = sqrt(sum);
+	    else 
+	       p[i] = sqrt(sum);
       }
           else {
             a[j][i] = sum / p[i];
@@ -356,15 +353,12 @@ void LU_substitution( double A[][NDIM], double B[], int n)
   
    /*Store the upper half of the A[NDIM][NDIM] matrix in a[NDIM][NDIM] */
     for( i = (n-1); i >= 0; i-- ) { 
-	    for( j = (i); j < n ; j++ ) { 
-	      a[i][j]=  A[i][j];
+	for( j = (i); j < n ; j++ ) { 
+	    a[i][j]=  A[i][j];
 	    } 
     }
-  // printf("\n");
-      for(i=0;i<n;i++)
-    {
+    for(i=0;i<n;i++)
             y[i]=y2[i+1];
-    }  
     
    /*Solve the linear system L^(T)x=y*/ 
      func(a,n,y,x);
@@ -386,52 +380,52 @@ void LU_substitution( double A[][NDIM], double B[], int n)
 
 	// print a square real matrix A of size n with caption s
 	// (n items per line).
-    void MatPrint(char *s, int n, MAT A) {
-      int i,j;
-      printf("\n %s\n", s);
-	  for (i=0; i<n; i++) {
-	    for (j=0; j<n; j++) 
-	      printf(" %10.6f",A[i][j]);
-            printf("\n");
-          }
-        }
+void MatPrint(char *s, int n, MAT A) {
+int i,j;
+printf("\n %s\n", s);
+  for (i=0; i<n; i++) {
+    for (j=0; j<n; j++) 
+      printf(" %10.6f",A[i][j]);
+    printf("\n");
+  }
+}
 
-	void MatPrint1(char *s, int n, double A[][NDIM]) {
-          int i,j;
-          printf("\n %s\n", s);
-	  for (i=0; i<n; i++) {
-	    for (j=0; j<n; j++) 
-	      printf(" %10.6f",A[i][j]);
-            printf("\n");
-          }
-        }
+void MatPrint1(char *s, int n, double A[][NDIM]) {
+  int i,j;
+  printf("\n %s\n", s);
+  for (i=0; i<n; i++) {
+    for (j=0; j<n; j++) 
+      printf(" %10.6f",A[i][j]);
+    printf("\n");
+  }
+}
 
-    //Print one dimensional array
-    void printArray(double arr[], int size)
-    {
-        int i;
-        for (i = 0; i < size; i++)
-            printf("%10.6lf ", arr[i]);
-        printf("\n");
+//Print one dimensional array
+void printArray(double arr[], int size)
+{
+int i;
+for (i = 0; i < size; i++)
+    printf("%10.6lf ", arr[i]);
+printf("\n");
+}
+
+
+// check if matrix A is positive definite (return 1)
+// or not positive definite (return 0) 
+int Check_Matrix(int n, MAT A) {
+  int i,j,k,result; double sum;
+  result=1;
+  for (i=0; i<n; i++) {
+    for (j = i; j<n; j++) {
+      sum = A[i][j];
+      for (k = i - 1; k>=0; k--)
+	sum -= A[i][k] * A[j][k];
+      if (i == j)
+	if (sum <= 0.0) result=0;
     }
-
-
-        // check if matrix A is positive definite (return 1)
-        // or not positive definite (return 0) 
-        int Check_Matrix(int n, MAT A) {
-          int i,j,k,result; double sum;
-          result=1;
-	  for (i=0; i<n; i++) {
-	    for (j = i; j<n; j++) {
-              sum = A[i][j];
-              for (k = i - 1; k>=0; k--)
-                sum -= A[i][k] * A[j][k];
-              if (i == j)
-                if (sum <= 0.0) result=0;
-	    }
-          }
-	  return result;
-	}
+  }
+  return result;
+}
 
 /******************************************
 *    MULTIPLICATION OF TWO SQUARE REAL    *                                     
