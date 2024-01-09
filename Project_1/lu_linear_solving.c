@@ -278,14 +278,14 @@ int invert_matrix( double Am[][NDIM], double Aminv[][NDIM], int n )
 
 /******************************************
 *    MULTIPLICATION OF TWO SQUARE REAL    *                                     
-*    MATRICES                             						*
-* --------------------------------------- 									*		                                     
-* INPUTS:    A  MATRIX N*N                				*                                     
-*            B  MATRIX N*N                						*                                     
-*            N  INTEGER                   						*                                     
-* --------------------------------------- 									*		                                     
+*    MATRICES                             *
+* --------------------------------------- *		                                     
+* INPUTS:    A  MATRIX N*N                *                                     
+*            B  MATRIX N*N                *                                     
+*            N  INTEGER                   *                                     
+* --------------------------------------- *		                                     
 * OUTPUTS:   C  MATRIX N*N PRODUCT A*B    *                                     
-*                                         									*
+*                                         *
 ******************************************/
 void MatMult(int n, double A[][NDIM],double B[][NDIM], double C[][NDIM]) {
   double SUM;
@@ -317,14 +317,14 @@ void MatPrint(char *s, int n, double A[][NDIM]) {
 
 /******************************************
 *    MULTIPLICATION OF TWO SQUARE REAL    *                                     
-*    MATRICES                             						*
-* --------------------------------------- 									*                                     
-* INPUTS:    A  MATRIX N*N                				*                                     
-*            B  MATRIX N*1                						*                                     
-*            N  INTEGER                   						*                                     
-* --------------------------------------- 									*	                                     
-* OUTPUTS:   C  MATRIX N*1 PRODUCT A*B     *                                     
-*                                         									*
+*    MATRICES                             *
+* --------------------------------------- *                                     
+* INPUTS:    A  MATRIX N*N                *                                     
+*            B  MATRIX N*1                *                                     
+*            N  INTEGER                   *                                     
+* --------------------------------------- *	                                     
+* OUTPUTS:   C  MATRIX N*1 PRODUCT A*B    *                                     
+*                                         *
 ******************************************/
 void MatMultOneDim(int n, double A[NDIM][NDIM],double B[], double C[]) {
   double SUM=0.0;
@@ -341,15 +341,15 @@ void MatMultOneDim(int n, double A[NDIM][NDIM],double B[], double C[]) {
 
 
 /******************************************
-*    SUBTRACTION OF TWO REAL    	*                                     
-*    MATRICES                             		*
-* --------------------------------------- 					*                                     
+*    SUBTRACTION OF TWO REAL    	  *                                     
+*    MATRICES                             *
+* --------------------------------------- *                                     
 * INPUTS:    A  MATRIX N*1                *                                     
-*            B  MATRIX N*1                		*                                     
-*            N  INTEGER                   		*                                     
-* --------------------------------------- 					*                                     
-* OUTPUTS:   C  MATRIX N*1 = A-B    *                                     
-*                                         					*
+*            B  MATRIX N*1                *                                     
+*            N  INTEGER                   *                                     
+* --------------------------------------- *                                     
+* OUTPUTS:   C  MATRIX N*1 = A-B    	  *                                     
+*                                         *
 ******************************************/
 void MatSubtraction(int n, double A[] ,double B[], double C[]){
   int I,J;                                                            
@@ -365,15 +365,15 @@ void MatSubtraction(int n, double A[] ,double B[], double C[]){
 
 
 /******************************************
-*    SUBTRACTION OF TWO SQUARE REAL   	*                                     
-*    MATRICES                             						*
-* --------------------------------------- 									*                                     
-* INPUTS:    A  MATRIX N*N                				*                                     
-*            B  MATRIX N*N                						*                                     
-*            N  INTEGER                   						*                                     
-* --------------------------------------- 									*                                     
-* OUTPUTS:   C  MATRIX N*N PRODUCT A-B	*                                     
-*                                         									*
+*    SUBTRACTION OF TWO SQUARE REAL   	  *                                     
+*    MATRICES                             *
+* --------------------------------------- *                                     
+* INPUTS:    A  MATRIX N*N                *                                     
+*            B  MATRIX N*N                *                                     
+*            N  INTEGER                   *                                     
+* --------------------------------------- *                                     
+* OUTPUTS:   C  MATRIX N*N PRODUCT A-B	  *                                     
+*                                         *
 ******************************************/
 void MatSubtraction2(int n, double A[NDIM][NDIM] , double B[NDIM][NDIM], double C[NDIM][NDIM]){
   int I,J;
@@ -389,15 +389,15 @@ void MatSubtraction2(int n, double A[NDIM][NDIM] , double B[NDIM][NDIM], double 
 
 
 /******************************************
-*    SUM OF ROWS OF SQUARE REAL    	*                                     
-*    MATRIX                             						*
-* --------------------------------------- 							*                                     
-* INPUTS:    A  MATRIX N*N               		*                                     
-*                  N  INTEGER            					*                                     
-*                             										*                                     
-* --------------------------------------- 							*                                     
-* OUTPUTS:   C  MATRIX N*1        				*                                     
-*                                         							*
+*    SUM OF ROWS OF SQUARE REAL    	  *                                     
+*    MATRIX                               *
+* --------------------------------------- *                                     
+* INPUTS:    A  MATRIX N*N                *                                     
+*                  N  INTEGER             *                                     
+*                             		  *                                     
+* --------------------------------------- *                                     
+* OUTPUTS:   C  MATRIX N*1        	  *                                     
+*                                         *
 ******************************************/
 void MatRowsSum(int n, double A[NDIM][NDIM],double C[]){
   double SUM=0.0;
