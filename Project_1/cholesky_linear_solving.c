@@ -10,14 +10,14 @@
 
 
 /**************************************************************************************
-*  Solve Ax=B linear system with cholesky method					     			                  *
-*  The matrix must be positive definite.                         			    			      *	 
+*  Solve Ax=B linear system with cholesky method				      *
+*  The matrix must be positive definite.                         		      *	 
 * --------------------------------------------------------------                      *
-* 					                                                                        	*
-*             																		           				                  *
-*             													                                        	    *
+* 					                                              *
+*             									      *
+*             									      *
 * ------------------------------------------------------------------------------------* 
-* SAMPLE RUN:                                                                       	*
+* SAMPLE RUN:                                                                         *
 *Size of the matrix is 4:   
 
 
@@ -486,14 +486,14 @@ void MatMultOneDim(int n, MAT A,double B[], double C[]) {
 
 
 /******************************************
-*    SUBTRACTION OF TWO REAL    *                                     
+*    SUBTRACTION OF TWO REAL              *                                     
 *    MATRICES                             *
 * --------------------------------------- *                                     
 * INPUTS:    A  MATRIX N*1                *                                     
 *            B  MATRIX N*1                *                                     
 *            N  INTEGER                   *                                     
 * --------------------------------------- *                                     
-* OUTPUTS:   C  MATRIX N*1 = A-B    *                                     
+* OUTPUTS:   C  MATRIX N*1 = A-B          *                                     
 *                                         *
 ******************************************/
 void MatSubtraction(int n, double A[] ,double B[], double C[]){
@@ -510,7 +510,7 @@ void MatSubtraction(int n, double A[] ,double B[], double C[]){
 
 
 /******************************************
-*    SUBTRACTION OF TWO SQUARE REAL    *                                     
+*    SUBTRACTION OF TWO SQUARE REAL       *                                     
 *    MATRICES                             *
 * --------------------------------------- *                                     
 * INPUTS:    A  MATRIX N*N                *                                     
