@@ -129,7 +129,9 @@ void choldcsl(int n, MAT A, MAT a) {
     }
   }
 }
- 
+
+
+
 /* -----------------------------------------------------------------------------
         Computation of Determinant of the matrix using Cholesky decomposition
 
@@ -144,7 +146,9 @@ double choldet(int n, MAT a) {
        for (i = 0; i < n; i++)  d *= c[i][i];
        return d * d;
 }
- 
+
+
+
 /* ---------------------------------------------------
         Matrix inverse using Cholesky decomposition
 
@@ -179,6 +183,8 @@ void cholsl(int n, MAT A, MAT a) {
   }
 }
 
+
+
 /* ----------------------------------------------------
         main method for Cholesky decomposition.
 
@@ -208,11 +214,6 @@ void choldc1(int n, MAT a, VEC p) {
     }
   }
 }
-
-
-
-
-
 
 
 
@@ -309,6 +310,7 @@ else
 }
 
 
+
 /************************************************************************
    LU_substitution():
        Performs the forward (w/ the Lower) and backward (w/ the Upper)   
@@ -378,8 +380,8 @@ void LU_substitution( double A[][NDIM], double B[], int n)
 
 
 
-	// print a square real matrix A of size n with caption s
-	// (n items per line).
+// print a square real matrix A of size n with caption s
+// (n items per line).
 void MatPrint(char *s, int n, MAT A) {
 int i,j;
 printf("\n %s\n", s);
@@ -427,6 +429,8 @@ int Check_Matrix(int n, MAT A) {
   return result;
 }
 
+
+
 /******************************************
 *    MULTIPLICATION OF TWO SQUARE REAL    *                                     
 *    MATRICES                             *
@@ -449,7 +453,6 @@ void MatMult(int n, MAT A,MAT B, MAT C) {
       C[I][J]=SUM;                                                            
     }                                                                   
 }
-
 
 
 
@@ -477,6 +480,7 @@ void MatMultOneDim(int n, MAT A,double B[], double C[]) {
 	SUM = 0.0;
   }	
 }
+
 
 
 /******************************************
@@ -527,6 +531,7 @@ void MatSubtraction2(int n, MAT A , MAT B, MAT C){
 }
 
 
+
 /******************************************
 *    SUM OF ROWS OF SQUARE REAL           *                                     
 *    MATRIX                               *
@@ -553,8 +558,6 @@ void MatRowsSum(int n, MAT A,double C[]){
 
 
 
-
-
 // copy MAT A in MAT A1
 void MatCopy(int n, MAT A, MAT A1) {
   int i,j;
@@ -562,9 +565,6 @@ void MatCopy(int n, MAT A, MAT A1) {
     for (j=0; j<n; j++)
       A1[i][j]=A[i][j];
 }
-
-
-
 
 
 
@@ -586,8 +586,6 @@ int readmatrix(size_t rows, size_t cols,MAT a , const char* filename)
     fclose (pf); 
     return 1; 
 }
-
-
 
 
 
@@ -616,9 +614,6 @@ int compareDoubles(const void *a, const void *b) {
     /*B is bigger*/
     return 1;
 }
-
-
-
 
 
 
