@@ -1,3 +1,5 @@
+##**<p align=center>Advanced Matrix Operations with LU Decomposition in C**
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,7 +67,7 @@
 
 
 <br> <br> <br>
-##**<p align=center>Advanced Matrix Operations with LU Decomposition in C**
+
 
 
 <!DOCTYPE html>
