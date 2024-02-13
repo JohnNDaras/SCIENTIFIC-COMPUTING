@@ -745,6 +745,6 @@ void main() {
 	qsort(C2, n, sizeof(double), compareDoubles);
 												
 	printf("\nThe absolute remainder is:\n");
-    printf("\n%10.6f / %10.6f\n\n",C2[0], x[0]);
+    	printf("\n%10.6f / %10.6f\n\n",C2[0], x[0]);
 					
 }
