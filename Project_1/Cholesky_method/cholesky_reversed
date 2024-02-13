@@ -10,14 +10,14 @@
 
 
 /*********************************************************************************************************************
-*  Inversion of a symmetric matrix by Cholesky decomposition.     						                                       *
-*  The matrix must be positive definite.                         			    			                                     * 
-* --------------------------------------------------------------                              			                 *
-* 						                                                                                                       *
-*                      												                                                                       *
-*                                                        							                                               *
-* ---------------------------------------------------------------------------------------------			                 * 
-* SAMPLE RUN:                                                                       				                         *
+*  Inversion of a symmetric matrix by Cholesky decomposition.     						     *
+*  The matrix must be positive definite.                         			    			     * 
+* --------------------------------------------------------------                              			     *
+* 						                                                                     *
+*                      												     *
+*                                                        							     *
+* ---------------------------------------------------------------------------------------------			     * 
+* SAMPLE RUN:                                                                       				     *
 *                                                                                                                    *
 * Inversion of a square real symetric matrix by Cholevsky method                                                     *
 * (The matrix must positive definite).                                                                               *
