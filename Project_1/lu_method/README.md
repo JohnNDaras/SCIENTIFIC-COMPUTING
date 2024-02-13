@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>Linear Algebra Solver with LU Decomposition in C</h1>
+<h2>1.Linear Algebra Solver with LU Decomposition in C</h2>
 
 <p>This project consists of a collection of C functions for performing various linear algebra operations, including LU decomposition, matrix inversion, matrix multiplication, and more. The project also includes a main program demonstrating the usage of these functions to solve linear systems and compute errors in solutions.</p>
 
