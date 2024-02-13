@@ -50,25 +50,6 @@
   <li>Absolute errors in solutions are calculated and printed within the main program.</li>
 </ul>
 
-<h2>Example:</h2>
-
-<pre><code>&lt;!-- Example usage of functions --&gt;
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-#include "linear_algebra_operations.h"
-
-int main() {
-    double A[NDIM][NDIM], B[NDIM] = {25.0, 75.0, 37.0, 46.0, 5.0, 93.0, -16.0, 41.0};
-    // Initialize matrix A and solve Ax=B linear system
-    // LU_decompose(...
-    // LU_substitution(...
-    // Print solution
-    // MatPrint("Solution x: ", NDIM, B);
-    // Calculate errors and print
-    // ...
-    return 0;
-}
-</code></pre>
 
 
 </body>
