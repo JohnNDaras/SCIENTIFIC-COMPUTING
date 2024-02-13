@@ -34,7 +34,7 @@
 
   <li><strong>Execution:</strong> Run the compiled program with the required input.</li>
   
-  <pre><code>./linear_solver</code></pre>
+  <pre><code>./cholesky_linear_solving</code></pre>
 
   <li><strong>Input:</strong> The program reads a matrix A and a vector B from a file named <code>2a1.txt</code>. Make sure this file exists in the same directory as the executable.</li>
 
