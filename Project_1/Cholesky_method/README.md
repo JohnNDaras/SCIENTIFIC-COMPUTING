@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<p align=center><h1>Linear System Solver with Cholesky Method</h1>
+<p align=center> <h1>Linear System Solver with Cholesky Method</h1>
 
 <p>This project implements a linear system solver using the Cholesky decomposition method. The Cholesky decomposition is particularly useful for solving linear systems with symmetric positive definite matrices. The program takes a matrix A and a vector B as input and solves the equation Ax = B, where A is symmetric positive definite.</p>
 
@@ -68,7 +68,7 @@
 </head>
 <body>
 
-<p align=center><h1>Matrix Inversion using Cholesky Decomposition</h1>
+<p align=center> <h1>Matrix Inversion using Cholesky Decomposition</h1>
 
 <p>This project implements the inversion of a square real symmetric matrix using the Cholesky decomposition method. The algorithm is designed for matrices that are positive definite.</p>
 
