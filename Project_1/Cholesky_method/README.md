@@ -91,6 +91,42 @@
 <p>The function modifies the lower triangular matrix <code>L</code> in place.</p>
 
 <!-- Other functions omitted for brevity -->
+<h3><code>cholesky_decomposition()</code></h3>
+
+<p>This function performs the Cholesky decomposition of a symmetric positive definite matrix. It takes the following parameters:</p>
+
+<ul>
+  <li><code>double A[][]</code>: The input matrix to be decomposed.</li>
+  <li><code>int n</code>: The size of the input matrix.</li>
+  <li><code>double L[][]</code>: The resulting lower triangular matrix L.</li>
+</ul>
+
+<p>The function modifies the lower triangular matrix <code>L</code> in place.</p>
+
+<h3><code>forward_substitution()</code></h3>
+
+<p>This function performs forward substitution to solve a lower triangular system of equations. It takes the following parameters:</p>
+
+<ul>
+  <li><code>double L[][]</code>: The lower triangular matrix from the Cholesky decomposition.</li>
+  <li><code>double b[]</code>: The right-hand side vector of the system of equations.</li>
+  <li><code>double x[]</code>: The solution vector to be computed.</li>
+</ul>
+
+<p>The function modifies the solution vector <code>x</code> in place.</p>
+
+<h3><code>backward_substitution()</code></h3>
+
+<p>This function performs backward substitution to solve an upper triangular system of equations. It takes the following parameters:</p>
+
+<ul>
+  <li><code>double U[][]</code>: The upper triangular matrix obtained from the Cholesky decomposition.</li>
+  <li><code>double y[]</code>: The right-hand side vector of the system of equations (obtained from forward substitution).</li>
+  <li><code>double x[]</code>: The solution vector to be computed.</li>
+</ul>
+
+<p>The function modifies the solution vector <code>x</code> in place.</p>
+
 
 <h2>Usage</h2>
 
