@@ -52,5 +52,102 @@
 
 <p>The program assumes that the input matrix A is symmetric positive definite. It may not produce correct results if the input matrix does not meet this condition.</p>
 
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matrix Inversion using Cholesky Decomposition</title>
+</head>
+<body>
+
+<h1>Matrix Inversion using Cholesky Decomposition</h1>
+
+<p>This project implements the inversion of a square real symmetric matrix using the Cholesky decomposition method. The algorithm is designed for matrices that are positive definite.</p>
+
+<h2>Description</h2>
+
+<p>The Cholesky decomposition method is employed to find the inverse of the input matrix. The process involves decomposing the original matrix into a lower triangular matrix and its transpose, and then using these decomposed matrices to find the inverse. The resulting inverse matrix is used to verify the correctness of the inversion by multiplying it with the original matrix to obtain the identity matrix.</p>
+
+<h2>Functions</h2>
+
+<h3><code>cholesky_decomposition()</code></h3>
+
+<p>This function performs the Cholesky decomposition of a symmetric positive definite matrix. It takes the following parameters:</p>
+
+<ul>
+  <li><code>double A[][]</code>: The input matrix to be decomposed.</li>
+  <li><code>int n</code>: The size of the input matrix.</li>
+  <li><code>double L[][]</code>: The resulting lower triangular matrix L.</li>
+</ul>
+
+<p>The function modifies the lower triangular matrix <code>L</code> in place.</p>
+
+<!-- Other functions omitted for brevity -->
+
+<h2>Usage</h2>
+
+<p>To use this program, follow these steps:</p>
+
+<ol>
+  <li>Compile the program using a C compiler (e.g., GCC).</li>
+  <pre><code>gcc matrix_inversion.c -o matrix_inversion -lm</code></pre>
+  <li>Run the executable with the appropriate inputs.</li>
+  <li>Provide the size of the matrix and the matrix itself.</li>
+  <li>The program will output the original matrix, its inverse, and the result of multiplying the original matrix with its inverse.</li>
+</ol>
+
+<h2>Sample Output</h2>
+
+<pre><code>
+Inversion of a square real symmetric matrix by Cholesky method
+(The matrix must be positive definite).
+
+Size of the matrix is 4:   
+The MATRIX is:
+
+        |   1   1   1   1   |
+        |   1   2   3   4   |
+        |   1   3   6   10  |
+        |   1   4   10  20  |
+
+Find A^(-1) with Cholesky method
+
+Matrix A:
+1.000000   1.000000   1.000000   1.000000   
+1.000000   2.000000   3.000000   4.000000   
+1.000000   3.000000   6.000000   10.000000   
+1.000000   4.000000   10.000000  20.000000   
+
+Matrix Inv(A):
+8.000000   -28.000000  56.000000  -70.000000  
+-28.000000  140.000000 -322.000000 434.000000  
+56.000000  -322.000000 812.000000 -1162.000000 
+-70.000000 434.000000  -1162.000000 1742.000000 
+
+Here is a verification:
+Verification A * Inv(A) = I:
+1.000000   0.000000   0.000000   0.000000   
+0.000000   1.000000   0.000000   0.000000   
+0.000000   0.000000   1.000000   0.000000   
+0.000000   0.000000   0.000000   1.000000 
+</code></pre>
+
+<h2>Error Calculation</h2>
+
+<p>The program also calculates the absolute relative error between the original matrix and its inverse, as well as the error resulting from multiplying the original matrix with its inverse and comparing the result with the identity matrix.</p>
+
+<h2>File Input</h2>
+
+<p>The program supports reading the input matrix from a file. Provide the filename containing the matrix values in the format specified by the program.</p>
+
+</body>
+</html>
+
 </body>
 </html>
