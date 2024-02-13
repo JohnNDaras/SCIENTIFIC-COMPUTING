@@ -43,7 +43,7 @@
 <h2>File Structure</h2>
 
 <ul>
-  <li><code>linear_solver.c</code>: Main source code file containing the implementation of the linear system solver.</li>
+  <li><code>cholesky_linear_solving.c</code>: Main source code file containing the implementation of the linear system solver.</li>
   <li><code>2a1.txt</code>: Input file containing the matrix A for the linear system.</li>
 </ul>
 
