@@ -28,6 +28,11 @@
   <li><code>compareDoubles</code>: Compares two double values for sorting purposes.</li>
 </ul>
 
+  <h2>Prerequisites</h2>
+  <ul>
+    <li>C compiler (e.g., GCC)</li>
+  </ul>
+
 <h2>Usage:</h2>
 
 <ol>
