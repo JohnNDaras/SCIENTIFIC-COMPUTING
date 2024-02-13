@@ -30,7 +30,7 @@
 <ol>
   <li><strong>Compilation:</strong> Compile the program using a C compiler such as <code>gcc</code>.</li>
   
-  <pre><code>gcc -o linear_solver linear_solver.c -lm</code></pre>
+  <pre><code>gcc -o cholesky_linear_solving cholesky_linear_solving.c -lm</code></pre>
 
   <li><strong>Execution:</strong> Run the compiled program with the required input.</li>
   
@@ -134,7 +134,7 @@
 
 <ol>
   <li>Compile the program using a C compiler (e.g., GCC).</li>
-  <pre><code>gcc matrix_inversion.c -o matrix_inversion -lm</code></pre>
+  <pre><code>gcc cholesky_reversed.c -o cholesky_reversed -lm</code></pre>
   <li>Run the executable with the appropriate inputs.</li>
   <li>Provide the size of the matrix and the matrix itself.</li>
   <li>The program will output the original matrix, its inverse, and the result of multiplying the original matrix with its inverse.</li>
