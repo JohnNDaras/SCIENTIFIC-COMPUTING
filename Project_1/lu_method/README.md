@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>Linear Algebra Operations in C</h1>
+<h1>Linear Algebra Solver with LU Decomposition in C</h1>
 
 <p>This project consists of a collection of C functions for performing various linear algebra operations, including LU decomposition, matrix inversion, matrix multiplication, and more. The project also includes a main program demonstrating the usage of these functions to solve linear systems and compute errors in solutions.</p>
 
@@ -65,6 +65,7 @@
 
 
 <br> <br> <br>
+##**<p align=center>Advanced Matrix Operations with LU Decomposition in C**
 
 
 <!DOCTYPE html>
@@ -74,7 +75,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1>Matrix Operations Library</h1>
+  <h1>Efficient Matrix Operations with LU Decomposition for Inversion/h1>
 
   <h2>Overview</h2>
   <p>This project provides a collection of functions for performing various matrix operations, including LU decomposition, matrix inversion, matrix multiplication, and more. The functions are written in C and can be utilized in any C program that requires matrix manipulation.</p>
