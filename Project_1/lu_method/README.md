@@ -77,7 +77,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1>Efficient Matrix Operations with LU Decomposition for Inversion</h1>
+  <h2>2.Efficient Matrix Operations with LU Decomposition for Inversion</h2>
 
   <h2>Overview</h2>
   <p>This project provides a collection of functions for performing various matrix operations, including LU decomposition, matrix inversion, matrix multiplication, and more. The functions are written in C and can be utilized in any C program that requires matrix manipulation.</p>
