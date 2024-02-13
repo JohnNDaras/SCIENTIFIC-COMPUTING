@@ -130,30 +130,6 @@
     <li>Error calculation is performed by comparing the original matrix with the inverted matrix.</li>
   </ul>
 
-  <h2>Example</h2>
-  <pre><code>#include &lt;stdio.h&gt;
-#include "matrix_operations.h"
-
-int main() {
-    // Example usage of functions
-    double A[NDIM][NDIM], Aminv[NDIM][NDIM];
-    int n = 3; // Size of the square matrix
-
-    // Populate matrix A with values
-    // Perform LU decomposition and matrix inversion
-    // Print the inverse matrix
-    // Calculate and print the absolute relative error
-    // Other operations can be performed similarly
-    
-    return 0;
-}
-  </code></pre>
-
-  <h2>Credits</h2>
-  <p>This project is inspired by the concepts presented in "Numerical Recipes in C" by Press et al. (1992).</p>
-
-  <h2>License</h2>
-  <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
 </body>
 </html>
 
