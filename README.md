@@ -1,6 +1,6 @@
 # SCIENTIFIC-COMPUTING
 
-Optimized Numerical Algorithms: Cholesky and LU Decomposition
+<strong>Optimized Numerical Algorithms: Cholesky and LU Decomposition</strong>
 <ul>
   <li><strong>1st part: Advanced Matrix Operations with Cholesky Decomposition in C</strong>
     <ul>
