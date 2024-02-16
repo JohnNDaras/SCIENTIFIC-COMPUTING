@@ -131,8 +131,64 @@
 <li><code>README.md</code>: This file, providing instructions and information about the code.</li>
 </ul>
 
-<h2>Notes</h2>
+<h2>Functions:</h2>
 
+<ul>
+    <li><code>menu()</code>:
+        <ul>
+            <li>This function displays the main menu for the program and prompts the user to select an option.</li>
+        </ul>
+    </li>
+    <li><code>Insert_A(int*)</code>:
+        <ul>
+            <li>Prompts the user to input the dimension N of the matrix A and then inserts the elements of the matrix along with the elements of the vector b.</li>
+        </ul>
+    </li>
+    <li><code>Insert_X(int)</code>:
+        <ul>
+            <li>Prompts the user to input the vector X (initial guess for the solution).</li>
+        </ul>
+    </li>
+    <li><code>GivenMatrix()</code>:
+        <ul>
+            <li>Displays a menu for selecting specific pre-defined matrices or returning to the main menu.</li>
+        </ul>
+    </li>
+    <li><code>Matrix_5x5(int*, double**)</code>, <code>Matrix_10x10(int*, double**)</code>, <code>Matrix_NxN(int*, double**)</code>:
+        <ul>
+            <li>Generate specific matrices (5x5, 10x10, or NxN) along with the corresponding vector X.</li>
+        </ul>
+    </li>
+    <li><code>Read_file_Axb(int*, double**)</code>:
+        <ul>
+            <li>Reads a matrix A and the corresponding vector b from a file named 'ask2_ESOR.txt'.</li>
+        </ul>
+    </li>
+    <li><code>PSD_menu()</code>:
+        <ul>
+            <li>Displays the menu for selecting the method of implementing the PSD algorithm.</li>
+        </ul>
+    </li>
+    <li><code>PSD_mainmethod(double**, double*, int)</code>:
+        <ul>
+            <li>Implements the PSD method to solve the linear system Ax = b. It prompts the user to input parameters for the PSD method and executes the method accordingly.</li>
+        </ul>
+    </li>
+    <li><code>PSD_iterativeMethod(double**, double**, int, double, double, int, int*)</code>:
+        <ul>
+            <li>Implements the iterative process of the PSD method for factorizing matrix A into L and U using partial pivoting.</li>
+        </ul>
+    </li>
+    <li><code>dispArray(int, int)</code>:
+        <ul>
+            <li>Dynamically allocates memory for a 2D array of given dimensions.</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+<h2>Notes</h2>
 <ul>
 <li>The program relies on standard C libraries and is compatible with most C compilers.</li>
 <li>Ensure proper input format and follow the instructions provided by the program for accurate results.</li>
