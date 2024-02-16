@@ -51,6 +51,23 @@
     <li>The program provides feedback on the execution time and the solution of the linear system.</li>
 </ul>
 
+    <h2>Functions:</h2>
+    <ul>
+        <li><code>main()</code></li>
+        <p>The main function presents a menu-driven interface for selecting the method of input for the coefficient matrix A and vector b. It then calls the <code>ESOR_mainmethod()</code> function to perform the ESOR iterative method for solving the linear system.</p>
+        <li><code>ESOR_mainmethod()</code></li>
+        <p>This function is the main driver for performing the ESOR iterative method. It takes the coefficient matrix A, the vector of unknowns x, and the size of the matrix as input. It also prompts the user for the maximum number of iterations and provides options for experimental validation and convergence study of the ESOR method.</p>
+        <li><code>ESOR_iterativeMethod()</code></li>
+        <p>This function implements the ESOR iterative method to solve the linear system Ax = b. It takes the coefficient matrix A, an initial approximation of the solution x1, the size of the matrix, relaxation parameters (t and w), maximum number of iterations, and a pointer to store the iteration count as input.</p>
+    </ul>
+    <h2>Matrix Generation Functions:</h2>
+    <p>These functions (<code>Insert_A()</code>, <code>Insert_X()</code>, <code>GivenMatrix()</code>, <code>Matrix_5x5()</code>, <code>Matrix_10x10()</code>, <code>Matrix_NxN()</code>, <code>Insert_rand_A()</code>, <code>Insert_rand_X()</code>, <code>Read_file_Axb()</code>) are responsible for generating various types of coefficient matrices A and vectors b. They provide options for manual input, selection from predefined matrices, random generation, and reading from a file.</p>
+    <h2>Utility Functions:</h2>
+    <ul>
+        <li><code>dispArray()</code>: Allocates memory for a 2D array (matrix).</li>
+        <li><code>sign()</code>: Generates a random sign (+1 or -1).</li>
+    </ul>
+
 <h2>License:</h2>
 
 <p>This program is provided under the MIT License. Feel free to modify and distribute it according to your needs.</p>
