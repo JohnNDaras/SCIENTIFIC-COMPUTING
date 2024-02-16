@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>Linear System Resolution using ESOR Iterative Method</h1>
+<h1>Part 1</h1>
 
 <p>This program implements the ESOR (Elementary Symmetric Overrelaxation) iterative method for solving linear systems of equations of the form Ax = b. It provides various options for inputting the matrix A and vector b, including manual input, predefined matrices, random generation, and reading from a file. Additionally, it offers an experimental validation of the method's accuracy and a study of the convergence behavior by varying the parameters within a specified range.</p>
 
