@@ -68,9 +68,6 @@
         <li><code>sign()</code>: Generates a random sign (+1 or -1).</li>
     </ul>
 
-<h2>License:</h2>
-
-<p>This program is provided under the MIT License. Feel free to modify and distribute it according to your needs.</p>
 
 </body>
 </html>
