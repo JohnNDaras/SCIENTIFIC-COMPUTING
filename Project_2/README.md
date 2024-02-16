@@ -51,8 +51,8 @@
     <li>The program provides feedback on the execution time and the solution of the linear system.</li>
 </ul>
 
-    <h2>Functions:</h2>
-    <ul>
+<h2>Functions:</h2>
+<ul>
         <li><code>main()</code></li>
         <p>The main function presents a menu-driven interface for selecting the method of input for the coefficient matrix A and vector b. It then calls the <code>ESOR_mainmethod()</code> function to perform the ESOR iterative method for solving the linear system.</p>
         <li><code>ESOR_mainmethod()</code></li>
