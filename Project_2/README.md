@@ -70,3 +70,74 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>README</title>
+</head>
+<body>
+<h1>README</h1>
+
+<p>This program is designed to solve a linear system of equations \( Ax = b \) using the Partially Separated Decomposition (PSD) method. The program provides various options for inputting the matrix \( A \) and vector \( b \), including manual entry, selection from predefined matrices, random generation within specified parameters, or reading from a file. After inputting the data, the program allows for the execution of the PSD method with options to experimentally adjust the accuracy or study the convergence of the iterative method with different parameters.</p>
+
+<h2>Usage</h2>
+
+<h3>Compilation</h3>
+
+<p>To compile the code, use any standard C compiler. For example, you can use <code>gcc</code>:</p>
+
+<pre><code>gcc -o main main.c -lm</code></pre>
+
+<p>sql</p>
+
+<h3>Execution</h3>
+
+<p>After compilation, run the executable <code>main</code>. The program will display a menu with options for inputting the matrix \( A \) and vector \( b \) and choosing the method of execution.</p>
+
+<h2>Functionality</h2>
+
+<h3>Input Methods</h3>
+
+<ol>
+<li><strong>Manual Input</strong>: Allows the user to manually input the dimensions and elements of matrix \( A \) and vector \( b \).</li>
+<li><strong>Predefined Matrices</strong>: Provides a list of predefined matrices, including a 5x5, 10x10, or user-defined \( N \times N \) matrix with specified parameters.</li>
+<li><strong>Random Matrix</strong>: Generates a random \( N \times N \) matrix within specified parameter ranges.</li>
+<li><strong>File Input</strong>: Reads matrix \( A \) and vector \( b \) from a file named 'ask2_ESOR.txt'.</li>
+</ol>
+
+<h3>PSD Method Execution</h3>
+
+<ol>
+<li><strong>Experimental Adjustment</strong>: Executes the PSD method with specified parameters \( t \) and \( w \), allowing the user to adjust the accuracy.</li>
+<li><strong>Convergence Study</strong>: Conducts an experimental study of the convergence of the PSD iterative method with parameters \( t \) and \( w \) ranging from 0.1 to 1.9 with a step of 0.1.</li>
+<li><strong>Exit</strong>: Terminates the program.</li>
+</ol>
+
+<h2>File Structure</h2>
+
+<ul>
+<li><code>main.c</code>: Contains the main code implementing the PSD method and menu functionalities.</li>
+<li><code>ask2_ESOR.txt</code>: Sample file for reading matrix \( A \) and vector \( b \).</li>
+<li><code>README.md</code>: This file, providing instructions and information about the code.</li>
+</ul>
+
+<h2>Notes</h2>
+
+<ul>
+<li>The program relies on standard C libraries and is compatible with most C compilers.</li>
+<li>Ensure proper input format and follow the instructions provided by the program for accurate results.</li>
+<li>Experiment with different input methods and parameters to understand the behavior of the PSD method in solving linear systems.</li>
+</ul>
+
+</body>
+</html>
