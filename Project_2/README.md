@@ -111,7 +111,7 @@
 
 <h3>Execution</h3>
 
-<p>After compilation, run the executable <code>main</code>. The program will display a menu with options for inputting the matrix \( A \) and vector \( b \) and choosing the method of execution.</p>
+<p>After compilation, run the executable <code>main</code>. The program will display a menu with options for inputting the matrix ( A ) and vector ( b ) and choosing the method of execution.</p>
 
 <h2>Functionality</h2>
 
