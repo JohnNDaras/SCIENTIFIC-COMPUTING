@@ -74,7 +74,7 @@
 
 
 
-
+<br> <br> <br>
 
 
 
@@ -83,10 +83,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>README</title>
 </head>
 <body>
-<h1>README</h1>
+<h1>Part 2</h1>
 
 <p>This program is designed to solve a linear system of equations ( Ax = b ) using the Partially Separated Decomposition (PSD) method. The program provides various options for inputting the matrix ( A ) and vector ( b ), including manual entry, selection from predefined matrices, random generation within specified parameters, or reading from a file. After inputting the data, the program allows for the execution of the PSD method with options to experimentally adjust the accuracy or study the convergence of the iterative method with different parameters.</p>
 
