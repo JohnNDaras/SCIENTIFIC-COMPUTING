@@ -90,15 +90,24 @@
 
 <p>This program is designed to solve a linear system of equations ( Ax = b ) using the Partially Separated Decomposition (PSD) method. The program provides various options for inputting the matrix ( A ) and vector ( b ), including manual entry, selection from predefined matrices, random generation within specified parameters, or reading from a file. After inputting the data, the program allows for the execution of the PSD method with options to experimentally adjust the accuracy or study the convergence of the iterative method with different parameters.</p>
 
+
+<h2>Compilation and Execution:</h2>
+
+<p>To compile the code, use a C compiler such as gcc:</p>
+
+<pre><code>gcc -o particle particle.c -lm</code></pre>
+
+<p>To execute the compiled program:</p>
+
+<pre><code>./particle</code></pre>
+
+
+
 <h2>Usage</h2>
 
 <h3>Compilation</h3>
 
 <p>To compile the code, use any standard C compiler. For example, you can use <code>gcc</code>:</p>
-
-<pre><code>gcc -o main main.c -lm</code></pre>
-
-<p>sql</p>
 
 <h3>Execution</h3>
 
