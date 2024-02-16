@@ -15,11 +15,11 @@
 
 <p>To compile the code, use a C compiler such as gcc:</p>
 
-<pre><code>gcc -o esor_linear_system_resolution esor_linear_system_resolution.c -lm</code></pre>
+<pre><code>gcc -o extrapolated extrapolated.c -lm</code></pre>
 
 <p>To execute the compiled program:</p>
 
-<pre><code>./esor_linear_system_resolution</code></pre>
+<pre><code>./extrapolated</code></pre>
 
 <h2>Usage:</h2>
 
@@ -51,7 +51,7 @@
     <li>The program provides feedback on the execution time and the solution of the linear system.</li>
 </ul>
 
-<h2>Functions:</h2>
+<h2>Main Functions:</h2>
 <ul>
         <li><code>main()</code></li>
         <p>The main function presents a menu-driven interface for selecting the method of input for the coefficient matrix A and vector b. It then calls the <code>ESOR_mainmethod()</code> function to perform the ESOR iterative method for solving the linear system.</p>
