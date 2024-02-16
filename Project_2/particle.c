@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
 
         do
 	{
-            printf ("\n\nMAIN MENU\n\n\t1. Parakalw eisagete ton pentadiagwnio pinaka A kai to dianysma b apo to plhkrologio\n\t2. Epilekste apo mia lista apo dosmenoys pinakes\n\t3. Epilekste thn diastash enos tyxaioy pinaka\n\t4. Eisagwgh pinaka apoarxeio me onoma: 'ask2_ESOR.txt'\n\n\t5. Eksodos.\n");	
+            printf ("\n\nMAIN MENU\n\n\t1. Please enter the five-dimensional array A and the vector b from the keyboard.\n\t2. Choose from a list of provided arrays.\n\t3. Select the dimension of a random array.\n\t4. Enter a file with the name: 'ask2_ESOR.txt'.\n\n\t5. Exit.\n");	
             printf("INPUT: ");
             scanf("%d", &Select);
         }while( (Select<1)||(Select>5));
@@ -196,19 +196,19 @@ void PSD_mainmethod (double **A, double *x, int n) {
     double t_opt, w_opt,t, w, cpuduration, itcpuduration, optimal_cputime;
     int Select,min_itcount=0,i, j, itmax,itcount=0;
 
-    printf("Dwste ton megisto arithmo epanalhpsewn poy epiyhymeite na efarmostoyne gia ton ypologismo ths lyshs toy systhmatos:\n  ");
+    printf("Provide the maximum number of iterations you wish to be executed for the solution of the system:\n  ");
 
     scanf("%d", &itmax);
 
     do{
-        printf ("IMPLEMENTATION MENU\n\t1. Peiramatikh epalhtheysh ths orthothtas toy PSD algorithmoy gia thn analysh toy grammikoy systhmatos Ax=b me x=(1,1, ...,1)^T\n\t2. Peiramatikh meleth ths sygklishs ths PSD epanalhptikhs methodoy me t,w na anhkoune sto [0.1, 1.9] me vhma 0.1\n\t3. Eksodos. \n");
+        printf ("IMPLEMENTATION MENU\n\t1. Experimental adjustment of the accuracy of the PSD algorithm for the analysis of the linear system Ax=b with x=(1,1, ...,1)^T\n\t2. Experimental study of the convergence of the PSD iterative method with parameters t,w belonging to [0.1, 1.9] with a step of 0.1 \n\t3. Exit.\n");
         printf("Epilogh: ");
         scanf("%d", &Select);
     }while( (Select>3)||(Select<1));
 
 
     switch(Select) {
-        case 1: printf("Dwste tis t kai w parametroys s' aythn thn seira opoy t, w anhkoyn 0.100.1)1.9 (p.x. t=0.1, w=0.4) :\n");
+        case 1: printf("Provide the parameters t and w in this sequence where t, w belong to the range 0.1 to 1.9 (e.g., t=0.1, w=0.4) :\n");
                 printf("t = ");
 		scanf("%lf", &t);
 		printf("w = ");
@@ -220,24 +220,24 @@ void PSD_mainmethod (double **A, double *x, int n) {
 		cpuduration += (t2. tv_usec - t1.tv_usec) / 1000.0;
 
 		if (itcount < itmax) 
-		    printf("\nH proseggistikh timh ths lyshs gia ton pinaka vrethike me parametroys tis t=%2.11F kai w=%2.11f meta apo %d epanalipseis \n", t,w, itcount) ;
+		    printf("\nThe approximate solution value for the matrix was found with parameters t=%2.1lf and w=%2.1lf after %d iterations. \n", t,w, itcount) ;
 		else 
-		    printf("\nH proseggistiki timh ths lyshs gia ton pinaka den vrethike se %d epanalhpseis me parametroys tis t=%2.1lf kai w=%2.1lf. H teleytaia proseggistikh lysh einai h parakatw. \n", itmax , t, w); 
+		    printf("\nThe approximate solution value for the matrix was not found in %d iterations with parameters t=%2.1lf and w=%2.1lf. The latest approximate solution is as follows \n", itmax , t, w); 
 
 
 		for(i=0; i<n; i++)
 		    printf("\n");
 		    for (i=0; j<n+1 ; j++)
 		        printf("%7.1lf", A[i][j]);
-		printf("\n\nH lysh toy systhmatos einai : \n");
+		printf("\n\nThe solution of the system is: \n");
 		printf("\tx = ( ");
 		for(i=0; i<n-1 ; i++)
 		    printf("%6.4lf, ", x[i]);
 		printf("%6.4lf )\n\n", x[n-1]);
-		printf("\nO xronos ekteleshs einai : %.5lf ms\n\n", cpuduration);
+		printf("\nThe execution time is: %.5lf ms\n\n", cpuduration);
 		break;
 	case 2: 
-		printf("\n\n\nOi parametroi t kai w epilegontai epanalhptika sto diasthma [0.1, 1.9] wste na vroyme tis veltistes times toy t kai toy w\n");
+		printf("\n\n\nThe parameters t and w are iteratively chosen within the interval [0.1, 1.9] in order to find the optimal values ​​of t and w.\n");
 		printf("__________________________________________________________________________________________________________________________\n");
 		printf("\n////////////////////////////////////////////////////////////////////////////////////////////////////////\n");
 		
@@ -255,15 +255,15 @@ void PSD_mainmethod (double **A, double *x, int n) {
 			    min_itcount = itcount;
 			    t_opt = t;
 			    w_opt = w;
-			    printf("//   Oi kalyteres parametroi mexri aytes tis epanalhpseis einai t_optimal = %2.1lf and w_optimal = %2.1lf   //\n", t_opt, w_opt);
+			    printf("//   The best parameters up to these iterations are t_optimal = %2.1lf and w_optimal = %2.1lf.   //\n", t_opt, w_opt);
 			}
 			itcount = 0;
 		    }
 		printf("////////////////////////////////////////////////////////////////////////////////////////////////////////\n");
 		if (min_itcount < itmax) 
-		    printf("\nH proseggistikh timh ths lyshs gia ton pinaka vrethike me veltistes parametroys tis t=%2.11F kai w=%2.11f meta apo %d epanalipseis \n", t_opt, w_opt, min_itcount) ;
+		    printf("\nThe approximate solution value for the matrix was found with optimal parameters t=%2.11F and w=%2.11f after %d iterations \n", t_opt, w_opt, min_itcount) ;
 		else    
-		    printf("\nH proseggistiki timh ths lyshs gia ton pinaka den vrethike se %d epanalhpseis me parametroys tis t=%2.1lf kai w=%2.1lf. H teleytaia proseggistikh lysh einai h parakatw.\n", itmax, t_opt, w_opt);
+		    printf("\nThe approximate solution value for the matrix was not found in %d iterations with parameters t=%2.1lf and w=%2.1lf. The latest approximate solution is as follows.\n", itmax, t_opt, w_opt);
 		
 		gettimeofday(&t3, NULL);
 		PSD_iterativeMethod(A, &x, n, t_opt, w_opt, itmax, &min_itcount);
@@ -281,11 +281,11 @@ void PSD_mainmethod (double **A, double *x, int n) {
 		for(i=0; i<n-1; i++)
 		    printf("%7.31f, ", x[i]);
 		printf("%7.3lf )\n\n", x[n-1]);
-		printf("H veltisth parametros t einai : %2.1lf\n", t_opt);
-		printf("H veltisth parametros w einai : %2.1lf\n", w_opt);
-		printf("O arithmos twn epanalhpsewn poy ektelesthkan me tis veltistes parametroys t kai w einai : %d\n", min_itcount);
-		printf("\nH ektelesh ths PSD methodoy gia to grammiko systhma Ax=b me oles tis times t kai w sto diasthma phre : %.41f ms\n\n", cpuduration);
-		printf("\nH ektelesh ths PSD me ton elaxisto arithmo epanalhpsewn phre : %.41f ms\n\n", optimal_cputime);
+		printf("The optimal parameter t is: %2.1lf\n", t_opt);
+		printf("The optimal parameter w is: %2.1lf\n", w_opt);
+		printf("The number of iterations executed with the optimal parameters t and w is: %d\n", min_itcount);
+		printf("\nThe execution of the PSD method for the linear system Ax=b with all values ​​of t and w within the specified range took : %.41f ms\n\n", cpuduration);
+		printf("\nThe execution of the PSD method with the minimum number of iterations took: %.41f ms\n\n", optimal_cputime);
 		break;
 
 
@@ -306,18 +306,18 @@ double **Insert_A(int *n) {
     //data of matrix A and vector b are inserted by the user
     double **Matrix;
     int i, j;
-    printf("Parakalw eisagete thn diastash N toy pinaka : ");
+    printf("Please enter the dimension N of the matrix: ");
     scanf("%d", n);
     Matrix = dispArray(*n, *n+1);
     //the one more column represents the b vector. this allowance has effect in the whole written program
-    printf("\nEisagete parakatw ta stoixeia toy pinaka: \n");
+    printf("\nPlease enter the elements of the matrix below: \n");
     for(i=0; i<*n; i++) {
 	for(j=0; j<*n; j++){
 	printf("A[%d][%d] = ", i, j);
 	scanf ("%lf", &Matrix[i][j]);
 	}
     }
-    printf("\nEisagete ta dedomena toy b: \n");
+    printf("\nEnter the data for vector b: \n");
     for (i=0; i<*n; i++){
 	printf("b[%d] = ", i);
 	scanf ("%lf", &Matrix[i][*n]);
@@ -333,7 +333,7 @@ double * Insert_X(int n) {
     double *Matrix; 
     int i;
     Matrix = (double*)malloc(n*sizeof(double));
-    printf("\nParakalw eisagete to dianysma X (p.x (1,1,1,1,1)^T gia enan 5x5 pentadiagwnio pinaka) : \n");
+    printf("\nPlease enter the vector X (e.g., (1,1,1,1,1)^T for a 5x5 pentadiagonal matrix) : \n");
     for (i=0; i<n; i++) {
 	printf("X[%d] = ", i);
 	scanf("%lf", &Matrix[i]);
@@ -347,7 +347,7 @@ int GivenMatrix() {
     //menu for the 2nd selection(specific matrices) of the main manu
     int number;
     do{
-	printf("\n\nSpecific matrices LIST		\nEpilekse sygkekrimeno pinaka (apo ta dedomena ths ekfwnhshs):\n\t1.Pentadiagwnios pinakas me diastaseis 5X5 (adjustment 1.1)\n\t2. Pentadiagwnios pinakas me diastaseis 10X10 (adjustment 1.ii)\n\t3. Pentadiagwnios pinakas me distaseis NXN, opoy N, a, b, c kai d dinontai apo esas me times 100, 1000, 10000(for N) kai 0.1-1.9(for each of a,b,c,d)\n\n\t4. Epistrofh sto menu.\n");	
+	printf("\n\nSpecific matrices LIST\nSelect a specific matrix (from the provided options):\n\t1. Pentadiagonal matrix with dimensions 5x5 (option 1.1)\n\t2. Pentadiagonal matrix with dimensions 10x10 (option 1.ii)\n\t3. Pentadiagonal matrix with dimensions NXN, where N, a, b, c, and d are given by you with values 100, 1000, 10000 (for N) and 0.1-1.9 (for each of a, b, c, d)\n\n\t4. Return to the menu.\n");	
 	
 	printf("INPUT : ");
 	scanf("%d", &number);
@@ -411,9 +411,9 @@ double **Matrix_NxN (int *n, double **X) {
     //where -a=k, -b=l, -c=r, -d=s
 
     int i, j;
-    printf("Parakalw eisagete th diastash toy pentadiagwnioy pianaka[NXN]  (p.x. 100, 1000, 10000) : ");
+    printf("Please enter the dimension of the pentadiagonal matrix [NXN] (e.g., 100, 1000, 10000): ");
     scanf("%d", n);
-    printf("Parakalw eisagete tiw parametroys a, b, c, d antistoixa se aythn th seira me a, b, c, d sto diasthma 0.1(0.1)1.9 (p.x. a=1.2, b=0.9, c=0.6, d=0.3) :\n");
+    printf("Please enter the parameters a, b, c, d respectively in this sequence, with a, b, c, d within the range 0.1(0.1)1.9 (e.g., a=1.2, b=0.9, c=0.6, d=0.3):\n");
     printf("a = ");
     scanf("%lf", &a);
     printf(" b = ");
