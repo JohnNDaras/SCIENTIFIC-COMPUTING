@@ -24,7 +24,7 @@
 <ul>
   <li><strong>1st part: C Implementation of ESOR Method for Linear System Solving</strong>
     <ul>
-      <li>This C project implements the ESOR (Successive Over-Relaxation) iterative method for solving linear systems of equations (Ax = b). Users can input matrices A and vectors b or choose predefined matrices. The code allows for manual input, selection from predefined matrices, random generation of matrices, or reading from a file. It provides ESOR implementation options, including basic analysis and iterative analysis with parameters t and w. Results include the solution vector x and execution times. The ESOR method is iterative, incorporating relaxation factor (w) and parameter (t) for convergence control. The code supports square matrices, employs predefined convergence criteria, and utilizes parallelization for enhanced performance.</li>
+      <li>This C program implements the ESOR (Successive Over-Relaxation) iterative method for solving linear systems of equations (Ax = b). Users can input matrices A and vectors b or choose predefined matrices. The code allows for manual input, selection from predefined matrices, random generation of matrices, or reading from a file. It provides ESOR implementation options, including basic analysis and iterative analysis with parameters t and w. Results include the solution vector x and execution times. The ESOR method is iterative, incorporating relaxation factor (w) and parameter (t) for convergence control. The code supports square matrices, employs predefined convergence criteria, and utilizes parallelization for enhanced performance.</li>
     </ul>
   </li>
   
