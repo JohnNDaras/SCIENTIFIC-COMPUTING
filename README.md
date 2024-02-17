@@ -18,11 +18,7 @@
 </ul>
 
 
-<br> <br> 
-
-
-
-
+<br> 
 
 <strong>2.Optimized Iterative Algorithms for Linear System Solutions</strong>
 <ul>
